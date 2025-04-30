@@ -9,7 +9,7 @@ Command: vcs -sverilog -timescale=1ns/1ns +vpi +define+UVM_OBJECT_MUST_HAVE_CONS
 +incdir+/home/morris/uvm-1.2/src /home/morris/uvm-1.2/src/uvm.sv /home/morris/uvm-1.2/src/dpi/uvm_dpi.cc \
 -f run.f -l compile.log -CFLAGS -DVCS
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Wed Apr 30 01:56:33 2025
+         Version U-2023.03-SP2-8 -- Wed Apr 30 02:03:10 2025
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -319,9 +319,11 @@ Back to file '/home/morris/uvm-1.2/src/uvm.sv'.
 Parsing design file '../package/test_pkg.sv'
 Parsing included file '/home/morris/uvm-1.2/src/uvm_macros.svh'.
 Back to file '../package/test_pkg.sv'.
+Parsing included file '../trans/tr_msg.svh'.
+Back to file '../package/test_pkg.sv'.
 Parsing included file '../uvc/tb_monitor.svh'.
 Back to file '../package/test_pkg.sv'.
-Parsing included file '../trans/tr_msg.svh'.
+Parsing included file '../uvc/tb_sequencer.svh'.
 Back to file '../package/test_pkg.sv'.
 Parsing included file '../seq/tr_sequence.svh'.
 Back to file '../package/test_pkg.sv'.
@@ -329,11 +331,11 @@ Parsing included file '../uvc/tb_agent.svh'.
 
 Error-[SE] Syntax error
   Following verilog source has syntax error :
-  	token 'tb_sequencer' should be a valid type. Please declare it 
-  virtual if it is an Interface.
-  "../uvc/tb_agent.svh", 6: token is ';'
-      tb_sequencer sequencer; 
-                             ^
+  	token 'tb_driver' should be a valid type. Please declare it virtual 
+  if it is an Interface.
+  "../uvc/tb_agent.svh", 7: token is ';'
+      tb_driver driver; 
+                       ^
 
 1 error
-CPU time: .609 seconds to compile
+CPU time: .647 seconds to compile

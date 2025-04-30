@@ -5,8 +5,9 @@ package test_pkg;
     import uvm_pkg::*; 
     // put includes here 
     // remember order matters includes are just copy pastes of files
-    `include "tb_monitor.svh"
     `include "tr_msg.svh"
+    `include "tb_monitor.svh"
+    `include "tb_sequencer.svh"
     `include "tr_sequence.svh"
     `include "tb_agent.svh"
     `include "tb_env.svh"
