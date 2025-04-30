@@ -9,7 +9,7 @@ Command: vcs -sverilog -timescale=1ns/1ns +vpi +define+UVM_OBJECT_MUST_HAVE_CONS
 +incdir+/home/morris/uvm-1.2/src /home/morris/uvm-1.2/src/uvm.sv /home/morris/uvm-1.2/src/dpi/uvm_dpi.cc \
 -f run.f -l compile.log -CFLAGS -DVCS
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Wed Apr 30 00:44:08 2025
+         Version U-2023.03-SP2-8 -- Wed Apr 30 01:56:33 2025
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -319,39 +319,21 @@ Back to file '/home/morris/uvm-1.2/src/uvm.sv'.
 Parsing design file '../package/test_pkg.sv'
 Parsing included file '/home/morris/uvm-1.2/src/uvm_macros.svh'.
 Back to file '../package/test_pkg.sv'.
-Parsing included file '../seq/tr_sequence.svh'.
+Parsing included file '../uvc/tb_monitor.svh'.
 Back to file '../package/test_pkg.sv'.
 Parsing included file '../trans/tr_msg.svh'.
 Back to file '../package/test_pkg.sv'.
+Parsing included file '../seq/tr_sequence.svh'.
+Back to file '../package/test_pkg.sv'.
 Parsing included file '../uvc/tb_agent.svh'.
-Back to file '../package/test_pkg.sv'.
-Parsing included file '../uvc/tb_env.svh'.
-Back to file '../package/test_pkg.sv'.
-Parsing included file '../test/tb_test.svh'.
-Back to file '../package/test_pkg.sv'.
-Parsing design file '../intf/dut_intf.sv'
-Parsing design file '../duts/i2c_defs.sv'
-Parsing design file '../duts/i2c.sv'
-Parsing design file '../top/top.sv'
-Parsing included file '/home/morris/uvm-1.2/src/uvm_macros.svh'.
-Back to file '../top/top.sv'.
-Top Level Modules:
-       top
-TimeScale is 1 ns / 10 ps
-Starting vcs inline pass...
 
-7 modules and 0 UDP read.
-recompiling module dut_intf
-	However, due to incremental compilation, only 1 module needs to be compiled. 
-rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
-if [ -x ../simv ]; then chmod a-x ../simv; fi
-g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
--Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib \
--Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _278154_archive_1.so _prev_archive_1.so \
-SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
--lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o \
--Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../simv.daidir/vc_hdrs.o \
-/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a \
--ldl  -lc -lm -lpthread -ldl 
-../simv up to date
-CPU time: 3.185 seconds to compile + .353 seconds to elab + .273 seconds to link
+Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  	token 'tb_sequencer' should be a valid type. Please declare it 
+  virtual if it is an Interface.
+  "../uvc/tb_agent.svh", 6: token is ';'
+      tb_sequencer sequencer; 
+                             ^
+
+1 error
+CPU time: .609 seconds to compile

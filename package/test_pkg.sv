@@ -3,9 +3,11 @@
 `include "uvm_macros.svh"
 package test_pkg; 
     import uvm_pkg::*; 
-    // put includes here
-    `include "tr_sequence.svh"
+    // put includes here 
+    // remember order matters includes are just copy pastes of files
+    `include "tb_monitor.svh"
     `include "tr_msg.svh"
+    `include "tr_sequence.svh"
     `include "tb_agent.svh"
     `include "tb_env.svh"
     `include "tb_test.svh"

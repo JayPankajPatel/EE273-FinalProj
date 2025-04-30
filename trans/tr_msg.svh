@@ -1,4 +1,5 @@
 class tr_msg extends uvm_sequence_item;
+  `uvm_object_utils(tr_msg)
 
   // APB inputs (driven by testbench) 
   rand bit [4:0]  paddr;
@@ -21,17 +22,25 @@ class tr_msg extends uvm_sequence_item;
   bit             sda_result;
   bit             interrupt;
 
-  `uvm_object_utils(tr_msg)
 
   function new(string name = "tr_msg");
     super.new(name);
-  endfunction
+  endfunction : new 
 
-  // Printable transaction message
-  function string convert2string();
-    return $sformatf("PADDR=0x%0h PWRITE=%0b PWDATA=0x%0h PRDATA=0x%0h PSEL=%0b PENABLE=%0b",
-                      paddr, pwrite, pwdata, prdata, psel, penable);
-  endfunction
+  // Printables for transaction message
+    function string input2string();
+      return $sformatf(
+        "PADDR=0x%0h  PWRITE=%0b  PWDATA=0x%0h  PSEL=%0b  PENABLE=%0b  SCL_drive=%0b  SDA_drive=%0b",
+        paddr, pwrite, pwdata, psel, penable, scl_drive, sda_drive
+      );
+    endfunction : input2string 
+
+    function string output2string();
+      return $sformatf(
+        "PRDATA=0x%0h  PREADY=%0b  PSLVERR=%0b  SCL_result=%0b  SDA_result=%0b  INTERRUPT=%0b",
+        prdata, pready, pslverr, scl_result, sda_result, interrupt
+      );
+    endfunction
 
   // Structured UVM printer override
   function void do_print(uvm_printer printer);
@@ -49,7 +58,7 @@ class tr_msg extends uvm_sequence_item;
     printer.print_field_int("SCL_RESULT", scl_result,1);
     printer.print_field_int("SDA_RESULT", sda_result,1);
     printer.print_field_int("INTERRUPT",  interrupt, 1);
-  endfunction
-endclass
+  endfunction : do_print
+endclass : tr_msg 
 
 
