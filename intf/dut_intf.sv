@@ -20,7 +20,7 @@ interface dut_intf(input logic PCLK);
   clocking cb @(posedge PCLK);
     default input #1step output #1step;
     output PADDR, PSEL, PENABLE, PWRITE, PWDATA, SCL_drive, SDA_drive;
-    input  PREADY, PRDATA, PSLVERR, Interrupt, SCL_result, SDA_result;
+    input  PRESET, PREADY, PRDATA, PSLVERR, Interrupt, SCL_result, SDA_result;
   endclocking
 endinterface
 

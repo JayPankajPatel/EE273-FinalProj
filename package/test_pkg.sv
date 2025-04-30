@@ -4,6 +4,7 @@
 package test_pkg; 
     import uvm_pkg::*; 
     // put includes here
+    `include "tr_msg.svh"
     `include "tb_agent.svh"
     `include "tb_env.svh"
     `include "tb_test.svh"

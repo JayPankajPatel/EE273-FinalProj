@@ -11,6 +11,12 @@
         "module",
         2
     ],
+    "_vcs_unit__3214351127": [
+        "_vcs_unit__3214351127",
+        "Ihjs4",
+        "module",
+        3
+    ],
     "std": [
         "std",
         "reYIK",
@@ -28,6 +34,12 @@
         "RW5mj",
         "module",
         6
+    ],
+    "i2c": [
+        "i2c",
+        "FPmmx",
+        "module",
+        9
     ],
     "top": [
         "top",
