@@ -18,9 +18,11 @@ interface dut_intf(input logic PCLK);
   // clocking block for driving
   // this is done to prevent Xs on the outputs when driving the dut
   clocking cb @(posedge PCLK);
+//Signal directions inside a clocking block are with respect to the testbench and not the DUT.
+      // Basicially if its an input on the dut its an output in the clocking block (tb's prespective) and vice versa. 
     default input #1step output #1step;
-    output PADDR, PSEL, PENABLE, PWRITE, PWDATA, SCL_drive, SDA_drive;
-    input  PRESET, PREADY, PRDATA, PSLVERR, Interrupt, SCL_result, SDA_result;
+    output PRESET, PADDR, PSEL, PENABLE, PWRITE, PWDATA, SCL_result, SDA_result;
+    input PREADY, PRDATA, PSLVERR, Interrupt, SCL_drive, SDA_drive;
   endclocking
 endinterface
 

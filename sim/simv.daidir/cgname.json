@@ -35,6 +35,12 @@
         "module",
         6
     ],
+    "dut_intf": [
+        "dut_intf",
+        "HQcyN",
+        "module",
+        10
+    ],
     "i2c": [
         "i2c",
         "FPmmx",
