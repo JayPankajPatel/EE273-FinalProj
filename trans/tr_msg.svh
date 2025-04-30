@@ -7,7 +7,7 @@ class tr_msg extends uvm_sequence_item;
   rand bit        psel;
   rand bit        penable;
   rand bit [31:0] pwdata;
-
+  rand bit        preset;
   // APB outputs (read by monitor) 
   bit [31:0] prdata;
   bit        pready;

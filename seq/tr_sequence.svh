@@ -4,15 +4,10 @@ class tr_sequence extends uvm_sequence #(tr_msg);
   function new(string name = "tr_sequence");
     super.new(name);
   endfunction : new
-
-  virtual function build_phase(uvm_phase phase); 
-      super.build_phase(phase); 
-      msg = tr_msg::type_id::create("msg", this);
-  endfunction : build_phase
-
   
   virtual task do_item();
       `uvm_info(get_name(), "Executing do_item sequence", UVM_LOW)
+      msg = tr_msg::type_id::create("msg");
       start_item(msg); 
       if(!msg.randomize()) 
           `uvm_fatal(get_name(), "Failed to randomize msg") 

@@ -2675,6 +2675,8 @@ void  rmaPropagate2_simv_daidir (UB  * pcode, scalar  val);
 void  rmaPropagate3_simv_daidir (UB  * pcode, scalar  val);
 void  rmaPropagate4_simv_daidir (UB  * pcode, scalar  val);
 void  rmaPropagate5_simv_daidir (UB  * pcode, scalar  val);
+void  rmaPropagate6_simv_daidir (UB  * pcode, scalar  val);
+void  rmaPropagate7_simv_daidir (UB  * pcode, scalar  val);
 void  schedNewEvent (struct dummyq_struct * I1417, EBLK  * I1412, U  I623);
 #ifdef __cplusplus
 }

@@ -6,6 +6,11 @@ class tb_driver extends uvm_driver #(tr_msg);
     super.new(name, parent);
   endfunction : new 
 
+    virtual function void build_phase(uvm_phase phase);
+     if(!uvm_config_db#(virtual dut_intf)::get(this, "", "vintf", vintf))
+          `uvm_fatal("NOVINTF", {get_name(),  "virtual interface must be set"})
+    endfunction : build_phase
+
   virtual task run_phase(uvm_phase phase);
     tr_msg msg; 
     forever begin
@@ -17,18 +22,18 @@ class tb_driver extends uvm_driver #(tr_msg);
     end
   endtask : run_phase
 
-  virtual function drive_item(tr_msg msg); 
-    `uvm_info("drive_item", tr.input2string(), UVM_FULL)
-    vintf.cb.PRESET     <= msg.PRESET;
-    vintf.cb.PADDR      <= msg.PADDR;
-    vintf.cb.PSEL       <= msg.PSEL;
-    vintf.cb.PENABLE    <= msg.PENABLE;
-    vintf.cb.PWRITE     <= msg.PWRITE;
-    vintf.cb.PWDATA     <= msg.PWDATA;
-    vintf.cb.SCL_result <= msg.SCL_result;
-    vintf.cb.SDA_result <= msg.SDA_result;
+  virtual task drive_item(tr_msg msg); 
+    `uvm_info("drive_item", msg.input2string(), UVM_FULL)
+    vintf.cb.PRESET     <= msg.preset;
+    vintf.cb.PADDR      <= msg.paddr;
+    vintf.cb.PSEL       <= msg.psel;
+    vintf.cb.PENABLE    <= msg.penable;
+    vintf.cb.PWRITE     <= msg.pwrite;
+    vintf.cb.PWDATA     <= msg.pwdata;
+    vintf.cb.SCL_result <= msg.scl_result;
+    vintf.cb.SDA_result <= msg.sda_result;
     @vintf.cb; //@(posedge vintf.PCLK )
-endfunction : drive_item
+  endtask : drive_item
 
       
   

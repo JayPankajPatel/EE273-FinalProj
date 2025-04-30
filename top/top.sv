@@ -36,7 +36,7 @@ module top;
 
   // Run UVM test
   initial begin
-    uvm_config_db#(virtual dut_intf)::set(null, "*", "vif", intf);
+    uvm_config_db#(virtual dut_intf)::set(null, "*", "vintf", intf);
     run_test("tb_test");
   end
 

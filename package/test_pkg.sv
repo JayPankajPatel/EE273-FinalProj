@@ -7,6 +7,7 @@ package test_pkg;
     // remember order matters includes are just copy pastes of files
     `include "tr_msg.svh"
     `include "tb_monitor.svh"
+    `include "tb_driver.svh"
     `include "tb_sequencer.svh"
     `include "tr_sequence.svh"
     `include "tb_agent.svh"
