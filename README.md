@@ -3,7 +3,7 @@ SoC I2C Master Verification
 
 # File Structure
 ## duts
-These are where all of the DUTs are located
+This is where are all of the DUTs are located
 the non-numbered dut is the working one and all else is in unknown condition
 ## intf
 Here lies the interface for the dut  
