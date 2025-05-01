@@ -56,7 +56,7 @@ class tb_monitor extends uvm_monitor;
         tr.sda_result = vintf.cb.SDA_drive;
         tr.interrupt = vintf.cb.Interrupt;
         //---------------------------------------------
-        // Copy sampled signals to output tr
+        // Shallow Copy sampled signals to output transaction message
         //---------------------------------------------
         msg = tr; 
         `uvm_info("sample_dut", tr.convert2string(), UVM_MEDIUM)

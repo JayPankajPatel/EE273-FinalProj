@@ -30,7 +30,7 @@ class tr_msg extends uvm_sequence_item;
     function bit do_compare(uvm_object rhs, uvm_comparer comparer);
         tr_msg tr;
         bit    eq;
-        if(!$cast(tr, rhs)) `uvm_fatal("trans1", "ILLEGAL do_compare() cast")
+        if(!$cast(tr, rhs)) `uvm_fatal("tr_msg", "ILLEGAL do_compare() cast")
         eq  = super.do_compare(rhs, comparer);
         eq &= (this.prdata === tr.prdata) &&
               (this.pready === tr.pready) &&
@@ -51,12 +51,35 @@ class tr_msg extends uvm_sequence_item;
       );
     endfunction : input2string 
 
+    function void copy(uvm_object rhs);
+        tr_msg tr; 
+        if(!$cast(tr, rhs)) `uvm_fatal("tr_msg", "ILLEGAL do_copy() cast")
+        this.paddr = tr.paddr;
+        this.pwrite = tr.pwrite;
+        this.psel = tr.psel;
+        this.penable = tr.penable;
+        this.pwdata = tr.pwdata;
+        this.preset = tr.preset;
+        this.prdata = tr.prdata;
+        this.pready = tr.pready;
+        this.pslverr = tr.pslverr;
+        this.scl_drive = tr.scl_drive;
+        this.sda_drive = tr.sda_drive;
+        this.scl_result = tr.scl_result;
+        this.sda_result = tr.sda_result;
+        this.interrupt = tr.interrupt;
+    endfunction : copy
+
     function string output2string();
       return $sformatf(
         "PRDATA=0x%h  PREADY=%0b  PSLVERR=%0b  SCL_result=%0b  SDA_result=%0b  INTERRUPT=%0b",
         prdata, pready, pslverr, scl_result, sda_result, interrupt
       );
     endfunction
+
+    function string convert2string();
+        return({this.input2string, "\n", this.output2string});
+    endfunction : convert2string
 
   // Structured UVM printer override
   function void do_print(uvm_printer printer);
