@@ -11,6 +11,10 @@ package test_pkg;
     `include "tb_sequencer.svh"
     `include "tr_sequence.svh"
     `include "tb_agent.svh"
+    `include "sb_predictor.svh"
+    `include "sb_calc_exp.svh"
+    `include "sb_comparator.svh"
+    `include "tb_scoreboard.svh"
     `include "tb_env.svh"
     `include "tb_test.svh"
 

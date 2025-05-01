@@ -5,12 +5,11 @@ class tb_monitor extends uvm_monitor;
 
     function new(string name="tb_monitor", uvm_component parent);
         super.new(name, parent);
-        ap = new("ap", this);
     endfunction : new
 
     virtual function void build_phase(uvm_phase phase);
-     if(!uvm_config_db#(virtual dut_intf)::get(this, "", "vintf", vintf))
-          `uvm_fatal("NOVINTF", {get_name(),  "virtual interface must be set"})
+        super.build_phase(phase);
+        ap = new("ap", this);
     endfunction : build_phase
 
     virtual task run_phase(uvm_phase phase); 

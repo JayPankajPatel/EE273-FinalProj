@@ -5,6 +5,7 @@
 +incdir+../uvc 
 +incdir+../intf 
 +incdir+../trans 
++incdir+../ref 
 +incdir+../seq  
 ../duts/i2c_defs.sv
 ../duts/i2c.sv

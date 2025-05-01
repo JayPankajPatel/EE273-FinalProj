@@ -6,10 +6,6 @@ class tb_driver extends uvm_driver #(tr_msg);
     super.new(name, parent);
   endfunction : new 
 
-    virtual function void build_phase(uvm_phase phase);
-     if(!uvm_config_db#(virtual dut_intf)::get(this, "", "vintf", vintf))
-          `uvm_fatal("NOVINTF", {get_name(),  "virtual interface must be set"})
-    endfunction : build_phase
 
   virtual task run_phase(uvm_phase phase);
     tr_msg msg; 

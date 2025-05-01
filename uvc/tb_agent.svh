@@ -28,11 +28,16 @@ class tb_agent extends uvm_agent;
 
   virtual function void connect_phase(uvm_phase phase); 
       super.connect_phase(phase); 
-      driver.seq_item_port.connect(sequencer.seq_item_export);
+      if(is_active == UVM_ACTIVE) begin
+          driver.seq_item_port.connect(sequencer.seq_item_export);
+          driver.vintf = this.vintf;
+      end
+      monitor.ap.connect(this.ap);
+      monitor.vintf = this.vintf; 
   endfunction : connect_phase
 
   virtual function void get_vintf(); 
-      if(!uvm_config_db#(virtual dut_intf)::get(this, "", "vintf", vintf))
+      if(!uvm_config_db#(virtual dut_intf)::get(this, "", "vintf", this.vintf))
           `uvm_fatal("NOVINTF", "virtual interface must be set")
   endfunction : get_vintf
 

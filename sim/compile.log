@@ -9,7 +9,7 @@ Command: vcs -sverilog -timescale=1ns/1ns +vpi +define+UVM_OBJECT_MUST_HAVE_CONS
 +incdir+/home/morris/uvm-1.2/src /home/morris/uvm-1.2/src/uvm.sv /home/morris/uvm-1.2/src/dpi/uvm_dpi.cc \
 -f run.f -l compile.log -CFLAGS -DVCS
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Wed Apr 30 15:42:34 2025
+         Version U-2023.03-SP2-8 -- Wed Apr 30 22:02:22 2025
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -331,6 +331,14 @@ Parsing included file '../seq/tr_sequence.svh'.
 Back to file '../package/test_pkg.sv'.
 Parsing included file '../uvc/tb_agent.svh'.
 Back to file '../package/test_pkg.sv'.
+Parsing included file '../uvc/sb_predictor.svh'.
+Back to file '../package/test_pkg.sv'.
+Parsing included file '../ref/sb_calc_exp.svh'.
+Back to file '../package/test_pkg.sv'.
+Parsing included file '../uvc/sb_comparator.svh'.
+Back to file '../package/test_pkg.sv'.
+Parsing included file '../uvc/tb_scoreboard.svh'.
+Back to file '../package/test_pkg.sv'.
 Parsing included file '../uvc/tb_env.svh'.
 Back to file '../package/test_pkg.sv'.
 Parsing included file '../test/tb_test.svh'.
@@ -348,19 +356,22 @@ Starting vcs inline pass...
 
 7 modules and 0 UDP read.
 recompiling package vcs_paramclassrepository
+recompiling package uvm_pkg
 recompiling package test_pkg
+recompiling module dut_intf
+recompiling module i2c
 recompiling module top
-3 of 7 modules done
-	However, due to incremental compilation, only 3 modules need to be compiled. 
+6 of 7 modules done
+	However, due to incremental compilation, only 6 modules need to be compiled. 
 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
 g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
 -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib \
--Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _211962_archive_1.so _prev_archive_1.so \
+-Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _260543_archive_1.so _prev_archive_1.so \
 SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
 -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o \
 -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../simv.daidir/vc_hdrs.o \
 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a \
 -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-CPU time: 3.903 seconds to compile + .339 seconds to elab + .332 seconds to link
+CPU time: 5.369 seconds to compile + .462 seconds to elab + .306 seconds to link

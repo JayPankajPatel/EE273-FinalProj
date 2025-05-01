@@ -23,9 +23,25 @@ class tr_msg extends uvm_sequence_item;
   bit             interrupt;
 
 
-  function new(string name = "tr_msg");
-    super.new(name);
-  endfunction : new 
+    function new(string name = "tr_msg");
+        super.new(name);
+    endfunction : new 
+
+    function bit do_compare(uvm_object rhs, uvm_comparer comparer);
+        tr_msg tr;
+        bit    eq;
+        if(!$cast(tr, rhs)) `uvm_fatal("trans1", "ILLEGAL do_compare() cast")
+        eq  = super.do_compare(rhs, comparer);
+        eq &= (this.prdata === tr.prdata) &&
+              (this.pready === tr.pready) &&
+              (this.pslverr === tr.pslverr) &&
+              (this.scl_result === tr.scl_result) &&
+              (this.sda_result === tr.sda_result) &&
+              (this.sda_result === tr.sda_result) &&
+              (this.interrupt === tr.interrupt)
+              ;
+        return(eq);
+    endfunction
 
   // Printables for transaction message
     function string input2string();
