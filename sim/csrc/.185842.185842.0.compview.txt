@@ -1,7 +1,0 @@
-Command exited with non-zero status 255
-{"vcs1":{"timestamp_begin":1746051571.413299375, "rt":0.79, "ut":0.52, "st":0.05}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1746051571.089209394}
-{"VCS_COMP_START_TIME": 1746051571.089209394}
-{"VCS_COMP_END_TIME": 1746051572.315719576}
-{"VCS_USER_OPTIONS": "-sverilog -timescale=1ns/1ns +vpi +define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR +incdir+/home/morris/uvm-1.2/src /home/morris/uvm-1.2/src/uvm.sv /home/morris/uvm-1.2/src/dpi/uvm_dpi.cc -f run.f -l compile.log -CFLAGS -DVCS"}
-{"vcs1": {"peak_mem": 259672}}

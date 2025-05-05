@@ -34,6 +34,10 @@ module top;
     .SDA_result(intf.SDA_result)
   );
 
+  initial begin
+      $dumpvars(0); 
+      $dumpfile("proj.vcd");
+  end
   // Run UVM test
   initial begin
     uvm_config_db#(virtual dut_intf)::set(null, "*", "vintf", intf);

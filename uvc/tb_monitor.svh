@@ -42,10 +42,9 @@ class tb_monitor extends uvm_monitor;
         // IF async-reset, Re-test async vif.rst_n and
         // re-assign t.rst_n if vif.rst_n is now low
         //---------------------------------------------
-        //if (!vintfv.rst_n) t.rst_n = '0;
+        if (!vintf.PRESET) tr.preset = '0;
         //---------------------------------------------
-        // Sample DUT outputs #1step before posedge clk.
-        // Uses clocking block timing for #1step
+        // Sample DUT outputs #1step before posedge clk.  Uses clocking block timing for #1step
         //---------------------------------------------
         // APB outputs (read by monitor) 
         tr.prdata = vintf.cb.PRDATA;
@@ -56,9 +55,10 @@ class tb_monitor extends uvm_monitor;
         tr.sda_result = vintf.cb.SDA_drive;
         tr.interrupt = vintf.cb.Interrupt;
         //---------------------------------------------
-        // Shallow Copy sampled signals to output transaction message
+        // Deep Copy sampled signals to output transaction message
         //---------------------------------------------
-        msg = tr; 
+        msg = tr_msg::type_id::create("msg", this); 
+        msg.copy(tr);
         `uvm_info("sample_dut", tr.convert2string(), UVM_MEDIUM)
     endtask : sample_dut
 

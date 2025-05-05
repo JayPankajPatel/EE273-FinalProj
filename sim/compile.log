@@ -5,11 +5,11 @@ Warning-[LNX_OS_VERUN] Unsupported Linux version
   VCS_ARCH_OVERRIDE to linux or suse32 to override.
   Please refer to release notes for information on supported platforms.
 
-Command: vcs -sverilog -timescale=1ns/1ns +vpi +define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR \
+Command: vcs -sverilog -timescale=1ns/1ns +vpi +define+DEBUG +define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR \
 +incdir+/home/morris/uvm-1.2/src /home/morris/uvm-1.2/src/uvm.sv /home/morris/uvm-1.2/src/dpi/uvm_dpi.cc \
 -f run.f -l compile.log -CFLAGS -DVCS
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Thu May  1 01:57:05 2025
+         Version U-2023.03-SP2-8 -- Sun May  4 23:21:51 2025
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -363,11 +363,11 @@ rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
 g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
 -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib \
--Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _310178_archive_1.so _prev_archive_1.so \
+-Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _1034839_archive_1.so _prev_archive_1.so \
 SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
 -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o \
 -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../simv.daidir/vc_hdrs.o \
 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a \
 -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-CPU time: 4.429 seconds to compile + .352 seconds to elab + .346 seconds to link
+CPU time: 4.084 seconds to compile + .415 seconds to elab + .342 seconds to link

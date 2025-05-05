@@ -1,5 +1,0 @@
-{"vcs1":{"timestamp_begin":1746077641.637962323, "rt":0.34, "ut":0.11, "st":0.04}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1746077640.950538364}
-{"VCS_COMP_START_TIME": 1746077640.950538364}
-{"VCS_COMP_END_TIME": 1746077642.076141180}
-{"VCS_USER_OPTIONS": "-sverilog -timescale=1ns/1ns +vpi +define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR +incdir+/home/morris/uvm-1.2/src /home/morris/uvm-1.2/src/uvm.sv /home/morris/uvm-1.2/src/dpi/uvm_dpi.cc -f run.f -l compile.log -CFLAGS -DVCS"}

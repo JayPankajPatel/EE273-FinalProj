@@ -29,6 +29,7 @@ class tb_driver extends uvm_driver #(tr_msg);
     vintf.cb.SCL_result <= msg.scl_result;
     vintf.cb.SDA_result <= msg.sda_result;
     @vintf.cb; //@(posedge vintf.PCLK )
+    //wait(vintf.PREADY == 1); 
   endtask : drive_item
 
       

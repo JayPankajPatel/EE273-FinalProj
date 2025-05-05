@@ -39,24 +39,24 @@
         "dut_intf",
         "HQcyN",
         "module",
-        10
+        7
     ],
     "i2c": [
         "i2c",
         "FPmmx",
         "module",
-        9
+        8
     ],
     "top": [
         "top",
         "Emx8S",
         "module",
-        7
+        9
     ],
     "...MASTER...": [
         "SIM",
         "amcQw",
         "module",
-        8
+        10
     ]
 }

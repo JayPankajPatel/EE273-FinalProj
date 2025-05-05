@@ -43,15 +43,14 @@ class tr_msg extends uvm_sequence_item;
         return(eq);
     endfunction
 
-  // Printables for transaction message
-    function string input2string();
-      return $sformatf(
-        "PADDR=0x%h  PWRITE=%0b  PWDATA=0x%0h  PSEL=%0b  PENABLE=%0b  SCL_drive=%0b  SDA_drive=%0b",
-        paddr, pwrite, pwdata, psel, penable, scl_drive, sda_drive
-      );
-    endfunction : input2string 
+  function string input2string();
+  return $sformatf(
+    "PADDR=0x%0h  PWRITE=%0b  PWDATA=0x%0h  PSEL=%0b  PENABLE=%0b  SDA_result=%0b  SCL_result=%0b",
+    paddr, pwrite, pwdata, psel, penable, sda_result, scl_result
+  );
+endfunction : input2string
 
-    function void copy(uvm_object rhs);
+function void copy(uvm_object rhs);
         tr_msg tr; 
         if(!$cast(tr, rhs)) `uvm_fatal("tr_msg", "ILLEGAL do_copy() cast")
         this.paddr = tr.paddr;
@@ -70,12 +69,12 @@ class tr_msg extends uvm_sequence_item;
         this.interrupt = tr.interrupt;
     endfunction : copy
 
-    function string output2string();
-      return $sformatf(
-        "PRDATA=0x%h  PREADY=%0b  PSLVERR=%0b  SCL_result=%0b  SDA_result=%0b  INTERRUPT=%0b",
-        prdata, pready, pslverr, scl_result, sda_result, interrupt
-      );
-    endfunction
+function string output2string();
+  return $sformatf(
+    "PRDATA=0x%0h  PREADY=%0b  PSLVERR=%0b  SCL_drive=%0b  SDA_drive=%0b  INTERRUPT=%0b",
+    prdata, pready, pslverr, scl_drive, sda_drive, interrupt
+  );
+endfunction : output2string
 
     function string convert2string();
         return({this.input2string, "\n", this.output2string});
