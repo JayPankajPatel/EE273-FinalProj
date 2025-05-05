@@ -4,7 +4,7 @@ SoC I2C Master Verification
 # File Structure
 ## duts
 This is where are all of the DUTs are located
-the non-numbered dut is the working one and all else is in unknown condition
+the non-numbered dut is the working one and all else are in unknown condition
 ## intf
 Here lies the interface for the dut  
 ## package
@@ -34,4 +34,4 @@ Contains Universial Verification Components which includes the following:
 
 ## Coding Conventions 
 All files that do not end in `.svh` are included, `.sv` files are passed via the command line in the run script  
-New sequences should be derived form `tr_sequence.svh`  and put in the `seq` folder
+New sequences should be derived from `tr_sequence.svh`  and put in the `seq` folder
