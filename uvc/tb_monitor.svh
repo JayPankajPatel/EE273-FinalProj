@@ -47,6 +47,7 @@ class tb_monitor extends uvm_monitor;
         // Sample DUT outputs #1step before posedge clk.  Uses clocking block timing for #1step
         //---------------------------------------------
         // APB outputs (read by monitor) 
+        wait(vintf.cb.PREADY == 1);
         tr.prdata = vintf.cb.PRDATA;
         tr.pready = vintf.cb.PREADY;
         tr.pslverr = vintf.cb.PSLVERR;

@@ -35,7 +35,7 @@ module top;
   );
 
   initial begin
-      $dumpvars(0); 
+      $dumpvars; 
       $dumpfile("proj.vcd");
   end
   // Run UVM test

@@ -16,7 +16,7 @@ interface dut_intf(input logic PCLK);
   logic        SDA_drive;
   logic        SDA_result;
   // clocking block for driving
-  // this is done to prevent Xs on the outputs when driving the dut
+ // this is done to prevent Xs on the outputs when driving the dut
   clocking cb @(posedge PCLK);
 //Signal directions inside a clocking block are with respect to the testbench and not the DUT.
       // Basicially if its an input on the dut its an output in the clocking block (tb's prespective) and vice versa. 

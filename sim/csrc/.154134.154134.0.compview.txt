@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1746594055.086751188, "rt":5.74, "ut":3.25, "st":0.07}}
+{"vcselab":{"timestamp_begin":1746594060.862278453, "rt":1.80, "ut":0.15, "st":0.03}}
+{"link":{"timestamp_begin":1746594062.752334348, "rt":1.05, "ut":0.11, "st":0.05}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1746594054.819423377}
+{"VCS_COMP_START_TIME": 1746594054.819423377}
+{"VCS_COMP_END_TIME": 1746594064.009516215}
+{"VCS_USER_OPTIONS": "-sverilog -timescale=1ns/1ns +vpi +define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR +incdir+/home/morris/uvm-1.2/src /home/morris/uvm-1.2/src/uvm.sv /home/morris/uvm-1.2/src/dpi/uvm_dpi.cc -f run.f -l compile.log -CFLAGS -DVCS"}
+{"vcs1": {"peak_mem": 289340}}
+{"vcselab": {"peak_mem": 156528}}

@@ -6,7 +6,7 @@ Warning-[LNX_OS_VERUN] Unsupported Linux version
   Please refer to release notes for information on supported platforms.
 
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Sun May  4 23:21:51 2025
+         Version U-2023.03-SP2-8 -- Tue May  6 22:02:09 2025
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -352,20 +352,17 @@ TimeScale is 1 ns / 10 ps
 Starting vcs inline pass...
 
 7 modules and 0 UDP read.
-recompiling package vcs_paramclassrepository
-recompiling package test_pkg
-Both modules done.
-	However, due to incremental compilation, only 2 modules need to be compiled. 
+	However, due to incremental compilation, no re-compilation is necessary.
 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
-g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _1034839_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../simv.daidir/vc_hdrs.o    /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _156133_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../simv.daidir/vc_hdrs.o    /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-CPU time: 4.084 seconds to compile + .415 seconds to elab + .342 seconds to link
+CPU time: 2.938 seconds to compile + .194 seconds to elab + .188 seconds to link
 Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
 Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
 Chronologic VCS simulator copyright 1991-2023
 Contains Synopsys proprietary information.
-Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  4 23:21 2025
+Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 22:02 2025
 UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
 ----------------------------------------------------------------
 UVM-1.2
@@ -390,117 +387,74 @@ UVM-1.2
 
 UVM_INFO @ 0: reporter [RNTST] Running test tb_test...
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 0: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../seq/tr_sequence.svh(18) @ 0: uvm_test_top.env.i2c_agent.sequencer@@seq [seq] Executing do_item sequence
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=0  SCL_result=0
-PRDATA=0x0  PREADY=0  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 1500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=0  SCL_result=0
+UVM_INFO ../seq/tr_sequence.svh(27) @ 0: uvm_test_top.env.i2c_agent.sequencer@@seq [seq] Executing do_item sequence
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 1500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=0  SCL_result=0
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 1500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 1500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 1500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 2500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=0  SCL_result=0
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 1500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=0  SCL_result=0
+PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
+UVM_INFO ../ref/sb_calc_exp.svh(5) @ 1500: uvm_test_top.env.sb.pred [Ref Model] not implemented
+UVM_INFO ../uvc/sb_comparator.svh(32) @ 1500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
+UVM_INFO ../uvc/sb_comparator.svh(30) @ 1500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 2500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=1  SCL_result=1
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 2500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 2500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 2500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 3500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 3500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=1  SCL_result=1
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 3500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 3500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 3500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 4500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x4  PWRITE=1  PWDATA=0x0  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 4500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=1  SCL_result=1
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 4500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 4500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 4500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 5500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x4  PWRITE=1  PWDATA=0x0  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 5500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 5500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 5500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 5500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 6500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x8  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 6500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x4  PWRITE=1  PWDATA=0x0  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 6500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 6500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 6500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 7500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x8  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 7500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x4  PWRITE=1  PWDATA=0x0  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 7500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 7500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 7500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 8500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x8  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
+UVM_INFO ../uvc/tb_monitor.svh(63) @ 8500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x8  PWRITE=1  PWDATA=0xf0  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 8500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 8500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 8500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 9500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x8  PWRITE=1  PWDATA=0xc0  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
-PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 9500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 9500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 9500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 10500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x8  PWRITE=1  PWDATA=0xc0  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
-PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 10500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 10500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 10500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 11500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x8  PWRITE=1  PWDATA=0xc0  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
-PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 11500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 11500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 11500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 12500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=1  PWDATA=0xaa  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
-PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 12500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 12500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 12500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 13500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=1  PWDATA=0xaa  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
-PRDATA=0x81  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 13500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 13500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 13500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-check_IBB_status task -> bit [31:0] read_reg: 0x00000000
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 14500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0xc  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
-PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 14500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 14500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 14500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 15500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0xc  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=0  SDA_result=1  SCL_result=1
-PRDATA=0x81  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 15500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 15500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 15500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-check_IBB_status task -> bit [31:0] read_reg: 0x00000000
-UVM_INFO ../uvc/tb_monitor.svh(62) @ 16500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0xc  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=1  SDA_result=1  SCL_result=1
-PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
-UVM_INFO ../ref/sb_calc_exp.svh(5) @ 16500: uvm_test_top.env.sb.pred [Ref Model] not implemented
-UVM_INFO ../uvc/sb_comparator.svh(32) @ 16500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
-UVM_INFO ../uvc/sb_comparator.svh(30) @ 16500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-IBB status: 0
-UVM_INFO ../seq/tr_sequence.svh(25) @ 16500: uvm_test_top.env.i2c_agent.sequencer@@seq [seq] PADDR=0xc  PWRITE=0  PWDATA=0x0  PSEL=1  PENABLE=0  SDA_result=0  SCL_result=0
-UVM_INFO /home/morris/uvm-1.2/src/base/uvm_objection.svh(1270) @ 16500: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 16500: reporter [UVM/REPORT/SERVER] 
+UVM_INFO ../seq/tr_sequence.svh(34) @ 8500: uvm_test_top.env.i2c_agent.sequencer@@seq [seq] PADDR=0x8  PWRITE=1  PWDATA=0xf0  PSEL=1  PENABLE=0  SDA_result=0  SCL_result=0
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_objection.svh(1270) @ 8500: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 8500: reporter [UVM/REPORT/SERVER] 
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :   74
+UVM_INFO :   42
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
 ** Report counts by id
-[CMPSB]    35
+[CMPSB]    19
 [RNTST]     1
-[Ref Model]    17
+[Ref Model]     9
 [TEST_DONE]     1
 [UVM/RELNOTES]     1
-[sample_dut]    17
+[sample_dut]     9
 [seq]     2
 
 $finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
-$finish at simulation time                16500
+$finish at simulation time                 8500
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 165000 ps
-CPU Time:      0.310 seconds;       Data structure size:   0.2Mb
-Sun May  4 23:21:58 2025
+Time: 85000 ps
+CPU Time:      0.280 seconds;       Data structure size:   0.2Mb
+Tue May  6 22:02:18 2025
