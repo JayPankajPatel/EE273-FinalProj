@@ -10,6 +10,7 @@ package test_pkg;
     `include "tb_driver.svh"
     `include "tb_sequencer.svh"
     `include "tr_sequence.svh"
+    `include "tb_i2c_slave.sv"
     `include "tb_agent.svh"
     `include "sb_predictor.svh"
     `include "sb_calc_exp.svh"

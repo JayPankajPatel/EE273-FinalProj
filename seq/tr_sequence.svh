@@ -2,7 +2,6 @@ class tr_sequence extends uvm_sequence #(tr_msg);
   `uvm_object_utils(tr_sequence);
     //pass a handle from the test to handle build and connect
     //
-    uvm_tlm_analysis_fifo #(tr_msg) fb_seq_fifo_handle; 
     tr_msg msg; 
 
     bit [4:0] reg_map[string] = '{
@@ -22,6 +21,9 @@ class tr_sequence extends uvm_sequence #(tr_msg);
   virtual task body(); 
           do_item();
   endtask : body 
+  virtual task do_nop();
+      do_APB_idle(); 
+  endtask : do_nop
 
   virtual task do_item();
       `uvm_info(get_name(), "Executing do_item sequence", UVM_LOW)
@@ -166,14 +168,6 @@ class tr_sequence extends uvm_sequence #(tr_msg);
       read_reg = msg.prdata; 
       IBB_status = read_reg[5]; 
   endtask : check_IBB_status
-
-  //Program MSTA and MTX
-
-  virtual task program_msta_mtx; 
-      
-      // TODO: implement this function
-  endtask : program_msta_mtx
-
 
 
 endclass : tr_sequence

@@ -1,6 +1,5 @@
 class tb_test extends uvm_test;
   `uvm_component_utils(tb_test);
-    uvm_tlm_analysis_fifo #(tr_msg) fb_seq_fifo; 
   tb_env env;
   tr_sequence seq; 
 
@@ -12,13 +11,10 @@ class tb_test extends uvm_test;
     super.build_phase(phase);
     env = tb_env::type_id::create("env", this);
     seq = tr_sequence::type_id::create("seq");
-    fb_seq_fifo = new("fb_seq_fifo", this);
-    seq.fb_seq_fifo_handle = fb_seq_fifo; 
   endfunction : build_phase
 
   virtual function void connect_phase(uvm_phase phase); 
       super.connect_phase(phase); 
-      env.i2c_agent.monitor.ap.connect(fb_seq_fifo.analysis_export); 
   endfunction : connect_phase
   
   virtual task run_phase(uvm_phase phase); 

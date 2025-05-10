@@ -39,8 +39,8 @@ class tb_monitor extends uvm_monitor;
 
         @vintf.cb;                // @(posedge vintf.clk);
         //---------------------------------------------
-        // IF async-reset, Re-test async vif.rst_n and
-        // re-assign t.rst_n if vif.rst_n is now low
+        // IF async-reset, Re-test async vintf.rst_n and
+        // re-assign t.rst_n if vintf.rst_n is now low
         //---------------------------------------------
         if (!vintf.PRESET) tr.preset = '0;
         //---------------------------------------------

@@ -6,7 +6,7 @@ Warning-[LNX_OS_VERUN] Unsupported Linux version
   Please refer to release notes for information on supported platforms.
 
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Tue May  6 22:02:09 2025
+         Version U-2023.03-SP2-8 -- Fri May  9 21:46:37 2025
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -326,6 +326,8 @@ Parsing included file '../uvc/tb_sequencer.svh'.
 Back to file '../package/test_pkg.sv'.
 Parsing included file '../seq/tr_sequence.svh'.
 Back to file '../package/test_pkg.sv'.
+Parsing included file '../uvc/tb_i2c_slave.sv'.
+Back to file '../package/test_pkg.sv'.
 Parsing included file '../uvc/tb_agent.svh'.
 Back to file '../package/test_pkg.sv'.
 Parsing included file '../uvc/sb_predictor.svh'.
@@ -352,17 +354,20 @@ TimeScale is 1 ns / 10 ps
 Starting vcs inline pass...
 
 7 modules and 0 UDP read.
-	However, due to incremental compilation, no re-compilation is necessary.
+recompiling package vcs_paramclassrepository
+recompiling package test_pkg
+Both modules done.
+	However, due to incremental compilation, only 2 modules need to be compiled. 
 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
-g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _156133_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../simv.daidir/vc_hdrs.o    /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./  uvm_dpi.o   objs/amcQw_d.o  _257759_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../simv.daidir/vc_hdrs.o    /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-CPU time: 2.938 seconds to compile + .194 seconds to elab + .188 seconds to link
+CPU time: 3.683 seconds to compile + .253 seconds to elab + .199 seconds to link
 Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
 Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
 Chronologic VCS simulator copyright 1991-2023
 Contains Synopsys proprietary information.
-Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 22:02 2025
+Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  9 21:46 2025
 UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
 ----------------------------------------------------------------
 UVM-1.2
@@ -387,7 +392,7 @@ UVM-1.2
 
 UVM_INFO @ 0: reporter [RNTST] Running test tb_test...
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 0: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../seq/tr_sequence.svh(27) @ 0: uvm_test_top.env.i2c_agent.sequencer@@seq [seq] Executing do_item sequence
+UVM_INFO ../seq/tr_sequence.svh(29) @ 0: uvm_test_top.env.i2c_agent.sequencer@@seq [seq] Executing do_item sequence
 UVM_INFO ../uvc/tb_monitor.svh(63) @ 1500: uvm_test_top.env.i2c_agent.monitor [sample_dut] PADDR=0x0  PWRITE=0  PWDATA=0x0  PSEL=0  PENABLE=0  SDA_result=0  SCL_result=0
 PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 1500: uvm_test_top.env.sb.pred [Ref Model] not implemented
@@ -433,7 +438,7 @@ PRDATA=0x0  PREADY=1  PSLVERR=0  SCL_drive=0  SDA_drive=0  INTERRUPT=0
 UVM_INFO ../ref/sb_calc_exp.svh(5) @ 8500: uvm_test_top.env.sb.pred [Ref Model] not implemented
 UVM_INFO ../uvc/sb_comparator.svh(32) @ 8500: uvm_test_top.env.sb.cmp [CMPSB] waiting for actual output
 UVM_INFO ../uvc/sb_comparator.svh(30) @ 8500: uvm_test_top.env.sb.cmp [CMPSB] waiting for expected output
-UVM_INFO ../seq/tr_sequence.svh(34) @ 8500: uvm_test_top.env.i2c_agent.sequencer@@seq [seq] PADDR=0x8  PWRITE=1  PWDATA=0xf0  PSEL=1  PENABLE=0  SDA_result=0  SCL_result=0
+UVM_INFO ../seq/tr_sequence.svh(36) @ 8500: uvm_test_top.env.i2c_agent.sequencer@@seq [seq] PADDR=0x8  PWRITE=1  PWDATA=0xf0  PSEL=1  PENABLE=0  SDA_result=0  SCL_result=0
 UVM_INFO /home/morris/uvm-1.2/src/base/uvm_objection.svh(1270) @ 8500: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 8500: reporter [UVM/REPORT/SERVER] 
 --- UVM Report Summary ---
@@ -456,5 +461,5 @@ $finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
 $finish at simulation time                 8500
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 85000 ps
-CPU Time:      0.280 seconds;       Data structure size:   0.2Mb
-Tue May  6 22:02:18 2025
+CPU Time:      0.320 seconds;       Data structure size:   0.2Mb
+Fri May  9 21:46:44 2025

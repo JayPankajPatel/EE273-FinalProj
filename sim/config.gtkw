@@ -1,0 +1,18 @@
+[*]
+[*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+[*] Sat May 10 00:45:22 2025
+[*]
+[dumpfile] "/home/018270239@SJSUAD.SJSU.EDU/Repos/273/EE273-FinalProj/sim/proj.vcd"
+[dumpfile_mtime] "Sat May 10 00:43:11 2025"
+[dumpfile_size] 1829
+[savefile] "/home/018270239@SJSUAD.SJSU.EDU/Repos/273/EE273-FinalProj/sim/config.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 157
+[pattern_trace] 1
+[pattern_trace] 0
