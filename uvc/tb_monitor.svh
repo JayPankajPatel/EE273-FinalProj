@@ -42,7 +42,7 @@ class tb_monitor extends uvm_monitor;
         // IF async-reset, Re-test async vintf.rst_n and
         // re-assign t.rst_n if vintf.rst_n is now low
         //---------------------------------------------
-        if (!vintf.PRESET) tr.preset = '0;
+        if (vintf.PRESET) tr.preset = '1;
         //---------------------------------------------
         // Sample DUT outputs #1step before posedge clk.  Uses clocking block timing for #1step
         //---------------------------------------------

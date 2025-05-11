@@ -1,0 +1,89 @@
+{
+ "builder": {
+  "_logger": "hdl_checker.builders.fallback",
+  "_builtin_libraries": [],
+  "_added_libraries": [
+   {
+    "name": "not_in_project",
+    "case_sensitive": true,
+    "__class__": "Identifier"
+   }
+  ],
+  "_version": "<undefined>",
+  "_work_folder": "/home/018270239@SJSUAD.SJSU.EDU/Repos/273/EE273-FinalProj/.hdl_checker",
+  "__class__": "Fallback"
+ },
+ "config_file": [
+  {
+   "name": "/home/018270239@SJSUAD.SJSU.EDU/Repos/273/EE273-FinalProj/.hdl_checker.config",
+   "__class__": "Path"
+  },
+  1746870655.102425,
+  "user"
+ ],
+ "database": {
+  "sources": [],
+  "inferred_libraries": [],
+  "design_units": [
+   {
+    "owner": {
+     "name": "/tmp/tmp7jpwti8b.sv",
+     "__class__": "Path"
+    },
+    "type_": "package",
+    "name": {
+     "name": "test_pkg",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      3,
+      8
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "/home/018270239@SJSUAD.SJSU.EDU/Repos/273/EE273-FinalProj/package/test_pkg.sv",
+     "__class__": "Path"
+    },
+    "type_": "package",
+    "name": {
+     "name": "test_pkg",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      3,
+      8
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "/home/018270239@SJSUAD.SJSU.EDU/Repos/273/EE273-FinalProj/top/top.sv",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "top",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      4,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   }
+  ],
+  "__class__": "Database"
+ },
+ "__version__": "0.7.4"
+}

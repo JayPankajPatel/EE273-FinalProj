@@ -1,18 +1,42 @@
 [*]
 [*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
-[*] Sat May 10 00:45:22 2025
+[*] Sun May 11 06:25:15 2025
 [*]
 [dumpfile] "/home/018270239@SJSUAD.SJSU.EDU/Repos/273/EE273-FinalProj/sim/proj.vcd"
-[dumpfile_mtime] "Sat May 10 00:43:11 2025"
-[dumpfile_size] 1829
+[dumpfile_mtime] "Sun May 11 06:22:04 2025"
+[dumpfile_size] 1995
 [savefile] "/home/018270239@SJSUAD.SJSU.EDU/Repos/273/EE273-FinalProj/sim/config.gtkw"
 [timestart] 0
 [size] 1000 600
 [pos] -1 -1
-*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-15.658561 75000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
 [sst_width] 273
-[signals_width] 78
+[signals_width] 226
 [sst_expanded] 1
 [sst_vpaned_height] 157
+@28
+top.intf.PCLK
+@22
+top.intf.PADDR[4:0]
+@28
+top.intf.PWRITE
+top.intf.PSEL
+top.intf.PENABLE
+@22
+top.intf.PWDATA[31:0]
+@29
+top.intf.PREADY
+@28
+top.intf.Interrupt
+@22
+top.intf.PRDATA[31:0]
+@28
+top.intf.PRESET
+top.intf.PSLVERR
+top.intf.SCL_drive
+top.intf.SCL_result
+top.intf.SDA_drive
+top.intf.SDA_result
 [pattern_trace] 1
 [pattern_trace] 0
