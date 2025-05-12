@@ -157,3 +157,22 @@
   CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
   CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
   CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_agent.sequencer STREAM:795}

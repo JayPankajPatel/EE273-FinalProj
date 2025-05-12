@@ -29,6 +29,10 @@ class tr_sequence extends uvm_sequence #(tr_msg);
       do_reset(); 
       do_init(); 
       do_transmit();
+      do_transmit();
+      do_nop();
+      do_nop();
+      #100000; 
       //do_read_status(); 
       //get_response(msg);
       `uvm_info(get_name(), msg.input2string(), UVM_LOW)
@@ -50,22 +54,15 @@ class tr_sequence extends uvm_sequence #(tr_msg);
       const bit [5:0] IC = 6'b000_000; // frequency divider input
 
       program_IFDR(IC); // Frequency divder register "I2C_FREQ"
-      do_APB_read(reg_map["I2C_FREQ"]);
       enable_I2C();
-      do_APB_read(reg_map["I2C_CTRL"]);
       program_IADR(slave_addr); // Program this module's slave address not necessary just for completeness sake
-      do_APB_read(reg_map["I2C_ADDR"]);
       
-      while(ibb_status == 1) begin
-          check_IBB_status(ibb_status);
-      end
       program_msta_mtx(); 
   endtask : do_init
 
   virtual task do_transmit(); 
       bit ibb_status = 0; 
-         check_IBB_status(ibb_status); // interrupt should be asserted here if starting from reset
-         do_APB_write(reg_map["I2C_DATA"], {25'b0, 7'b1111_111});
+      do_APB_write(reg_map["I2C_DATA"], {25'b0, 7'b1111_110});
   endtask : do_transmit
   
   virtual task program_IFDR(bit [5:0] IC); 
@@ -75,7 +72,8 @@ class tr_sequence extends uvm_sequence #(tr_msg);
   endtask : program_IFDR
   
   virtual task enable_I2C(); 
-      do_APB_write(reg_map["I2C_CTRL"], {16'b0, 8'b0, 6'b1100_00, 2'b00});
+      do_APB_write(reg_map["I2C_CTRL"], {16'b0, 8'b0, 6'b1000_00, 2'b00}); // must enable i2c bit before any other bits take in to effect in ctrl reg
+      do_APB_write(reg_map["I2C_CTRL"], {16'b0, 8'b0, 6'b1111_00, 2'b00});
   endtask : enable_I2C
 
   virtual task program_IADR(input bit [6:0] addr); 
