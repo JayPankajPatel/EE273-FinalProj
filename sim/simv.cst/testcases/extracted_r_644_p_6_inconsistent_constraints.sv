@@ -1,0 +1,21 @@
+class c_644_6;
+    bit[0:0] sda_result = 1'h0;
+
+    constraint WITH_CONSTRAINT_this    // (constraint_mode = ON) (../seq/tr_paul_sequence.svh:63)
+    {
+       (sda_result == 1'h1);
+    }
+endclass
+
+program p_644_6;
+    c_644_6 obj;
+    string randState;
+
+    initial
+        begin
+            obj = new;
+            randState = "zx1xzz01z1zzxz1zxzzzz0z00xxx10z0zzzxzzzzxxzzzxxzxzzzzxxxzxzzxzzz";
+            obj.set_randstate(randState);
+            obj.randomize();
+        end
+endprogram

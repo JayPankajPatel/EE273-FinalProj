@@ -5,7 +5,7 @@ class tb_agent extends uvm_agent;
     virtual dut_intf vintf; 
 
     tb_sequencer sequencer; 
-    tb_driver driver; 
+    tb_paul_driver driver; 
 
     uvm_analysis_port #(tr_msg) ap;
     tb_monitor monitor; 
@@ -19,7 +19,7 @@ class tb_agent extends uvm_agent;
       super.build_phase(phase); 
        if(is_active == UVM_ACTIVE) begin 
           sequencer = tb_sequencer::type_id::create("sequencer", this); 
-          driver = tb_driver::type_id::create("driver", this); 
+          driver = tb_paul_driver::type_id::create("driver", this); 
        end
       monitor = tb_monitor::type_id::create("monitor", this); 
       ap = new("ap", this); 

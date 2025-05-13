@@ -15,6 +15,7 @@ module top;
   // interface 
   dut_intf intf(.PCLK(clk));
 
+
   // dut instance defined from dut location that is in run.f 
   i2c DUT (
     .PCLK      (intf.PCLK),

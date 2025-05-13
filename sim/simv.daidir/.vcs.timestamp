@@ -1,4 +1,4 @@
-369      
+385      
 0 uvm_pkg.sv
 0 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/etc/systemverilog/uvm_pkg.sv
 0 uvm_macros.svh
@@ -303,6 +303,12 @@
 0 ../package/tb_driver.svh
 0 ../test/tb_driver.svh
 0 ../top/tb_driver.svh
+0 tb_paul_driver.svh
+0 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/etc/systemverilog/tb_paul_driver.svh
+0 /home/morris/uvm-1.2/src/tb_paul_driver.svh
+0 ../package/tb_paul_driver.svh
+0 ../test/tb_paul_driver.svh
+0 ../top/tb_paul_driver.svh
 0 tb_sequencer.svh
 0 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/etc/systemverilog/tb_sequencer.svh
 0 /home/morris/uvm-1.2/src/tb_sequencer.svh
@@ -319,12 +325,22 @@
 0 ../intf/tr_sequence.svh
 0 ../trans/tr_sequence.svh
 0 ../ref/tr_sequence.svh
-0 tb_i2c_slave.sv
-0 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/etc/systemverilog/tb_i2c_slave.sv
-0 /home/morris/uvm-1.2/src/tb_i2c_slave.sv
-0 ../package/tb_i2c_slave.sv
-0 ../test/tb_i2c_slave.sv
-0 ../top/tb_i2c_slave.sv
+0 tr_paul_sequence.svh
+0 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/etc/systemverilog/tr_paul_sequence.svh
+0 /home/morris/uvm-1.2/src/tr_paul_sequence.svh
+0 ../package/tr_paul_sequence.svh
+0 ../test/tr_paul_sequence.svh
+0 ../top/tr_paul_sequence.svh
+0 ../uvc/tr_paul_sequence.svh
+0 ../intf/tr_paul_sequence.svh
+0 ../trans/tr_paul_sequence.svh
+0 ../ref/tr_paul_sequence.svh
+0 tb_slave.svh
+0 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/etc/systemverilog/tb_slave.svh
+0 /home/morris/uvm-1.2/src/tb_slave.svh
+0 ../package/tb_slave.svh
+0 ../test/tb_slave.svh
+0 ../top/tb_slave.svh
 0 tb_agent.svh
 0 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/etc/systemverilog/tb_agent.svh
 0 /home/morris/uvm-1.2/src/tb_agent.svh
@@ -406,9 +422,9 @@ cdk_dir=/apps/cadence/IC50/tools/dfII/local
 __MODULES_SHARE_MANPATH=:1
 __MODULES_LMINIT=module use --append /usr/share/Modules/modulefiles:module use --append /etc/modulefiles:module use --append /usr/share/modulefiles
 XRDP_SOCKET_PATH=/run/xrdp/1580568926
-XRDP_SESSION=463292
-XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_10
-XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_10
+XRDP_SESSION=1086938
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_11
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_11
 XMODIFIERS=@im=ibus
 XDG_SESSION_TYPE=x11
 XDG_SESSION_CLASS=user
@@ -435,21 +451,21 @@ USE_NCSU_CDK=
 UNAME=/bin/uname
 TOOL_HOME=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux
 TK_LIBRARY=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/etc/auxx/tcllib/tk8.4/library
-SYSTEMD_EXEC_PID=463495
+SYSTEMD_EXEC_PID=1087120
 SYNOPSYS_SIM=/apps/synopsys/2000.12
 SYNOPSYS=/apps/synopsys
 STROOT=/apps/synopsys/TCAD
 STRELEASE=current
 STDB=/home/018270239@SJSUAD.SJSU.EDU/sentaurus
 SSH_AUTH_SOCK=/run/user/1580568926/keyring/ssh
-SSH_AGENT_PID=463446
+SSH_AGENT_PID=1087071
 SNPS_VCS_PYTHON3=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/bin/Python-3.6.1/bin/python3
 SNPS_VCS_CLANG_PATH=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
 SNPSLMS_LICENSE_FILE=27020@coe-ee-licsrv.sjsuad.sjsu.edu:C:LicensingSynopsysSynopsys_Key_Site_5009_Server_337521_snpslmd.lic
 SKIP_CDS_DIALOG=
 SFLM_SERVER=coe-ee-licsrv.sjsuad.sjsu.edu
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/463474,unix/unix:/tmp/.ICE-unix/463474
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1087099,unix/unix:/tmp/.ICE-unix/1087099
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=ibus
@@ -475,8 +491,8 @@ HSP_HOME=/apps/synopsys/HSPICE/hspice
 HOSTTYPE=x86_64-linux
 HISTCONTROL=ignoredups
 GROUP=domain users
-GNOME_TERMINAL_SERVICE=:1.88
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/e68d3e2f_cf39_4c56_a305_2c871a9e9a4f
+GNOME_TERMINAL_SERVICE=:1.79
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/63616fab_8c65_4997_a513_6d8e26374032
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1580568926/bus
 COLORTERM=truecolor
 CLS_CSD_COMPATIBILITY_LOCKING=NO
@@ -490,20 +506,22 @@ CDS=/apps/cadence
 ARCH=linux
 0
 0
-163
-1746839112 ../test/tb_test.svh
+165
+1747091555 ../test/tb_test.svh
 1746838793 ../uvc/tb_env.svh
 1746075675 ../uvc/tb_scoreboard.svh
 1746404039 ../uvc/sb_comparator.svh
 1746073395 ../ref/sb_calc_exp.svh
 1746075431 ../uvc/sb_predictor.svh
-1746489805 ../uvc/tb_agent.svh
-1746852518 ../uvc/tb_i2c_slave.sv
-1747007053 ../seq/tr_sequence.svh
+1747110008 ../uvc/tb_agent.svh
+1747109930 ../uvc/tb_slave.svh
+1747091854 ../seq/tr_paul_sequence.svh
+1747091075 ../seq/tr_sequence.svh
 1746003747 ../uvc/tb_sequencer.svh
+1747092747 ../uvc/tb_paul_driver.svh
 1746948545 ../uvc/tb_driver.svh
 1746995864 ../uvc/tb_monitor.svh
-1746840282 ../trans/tr_msg.svh
+1747091788 ../trans/tr_msg.svh
 1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
 1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_mem_built_in_seq.svh
 1402647219 /home/morris/uvm-1.2/src/reg/sequences/uvm_reg_mem_shared_access_seq.svh
@@ -646,11 +664,11 @@ ARCH=linux
 1402647219 /home/morris/uvm-1.2/src/macros/uvm_version_defines.svh
 1402647219 /home/morris/uvm-1.2/src/uvm_macros.svh
 1402647219 /home/morris/uvm-1.2/src/uvm_pkg.sv
-1746870547 ../top/top.sv
+1747023517 ../top/top.sv
 1746076782 ../duts/i2c.sv
 1745995141 ../duts/i2c_defs.sv
-1746593044 ../intf/dut_intf.sv
-1746870319 ../package/test_pkg.sv
+1747023823 ../intf/dut_intf.sv
+1747097948 ../package/test_pkg.sv
 1402647219 /home/morris/uvm-1.2/src/uvm.sv
 1746837203 pkg.f
 1746837203 run.f
@@ -660,5 +678,5 @@ ARCH=linux
 1723520847 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/liberrorinf.so
 1723520604 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/libsnpsmalloc.so
 1723521397 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/libvfs.so
-1747007062 simv.daidir
+1747110023 simv.daidir
 -1 partitionlib

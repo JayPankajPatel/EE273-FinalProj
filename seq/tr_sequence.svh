@@ -29,10 +29,10 @@ class tr_sequence extends uvm_sequence #(tr_msg);
       do_reset(); 
       do_init(); 
       do_transmit();
-      do_transmit();
-      do_nop();
-      do_nop();
-      #100000; 
+      repeat(1000) begin 
+          do_APB_read(reg_map["I2C_STAT"]);
+          do_APB_read(reg_map["I2C_CTRL"]);
+      end
       //do_read_status(); 
       //get_response(msg);
       `uvm_info(get_name(), msg.input2string(), UVM_LOW)
@@ -51,20 +51,19 @@ class tr_sequence extends uvm_sequence #(tr_msg);
 //mode, and Interrupt-Enable or not
       bit ibb_status = 1;
       const bit [6:0] slave_addr = 7'b1010_101;
-      const bit [5:0] IC = 6'b000_000; // frequency divider input
+      const bit [5:0] IC = 6'b000_000; // frequency divider prescaler of 30
 
       program_IFDR(IC); // Frequency divder register "I2C_FREQ"
-      enable_I2C();
       program_IADR(slave_addr); // Program this module's slave address not necessary just for completeness sake
-      
-      program_msta_mtx(); 
+      enable_I2C();
   endtask : do_init
 
   virtual task do_transmit(); 
       bit ibb_status = 0; 
+      program_msta_mtx(2'b11);
       do_APB_write(reg_map["I2C_DATA"], {25'b0, 7'b1111_110});
   endtask : do_transmit
-  
+
   virtual task program_IFDR(bit [5:0] IC); 
       //assumes APB state is at SETUP
       do_APB_write(reg_map["I2C_FREQ"], {16'b0, 10'b0, IC});
@@ -73,7 +72,7 @@ class tr_sequence extends uvm_sequence #(tr_msg);
   
   virtual task enable_I2C(); 
       do_APB_write(reg_map["I2C_CTRL"], {16'b0, 8'b0, 6'b1000_00, 2'b00}); // must enable i2c bit before any other bits take in to effect in ctrl reg
-      do_APB_write(reg_map["I2C_CTRL"], {16'b0, 8'b0, 6'b1111_00, 2'b00});
+      do_APB_write(reg_map["I2C_CTRL"], {16'b0, 8'b0, 6'b1100_00, 2'b00});
   endtask : enable_I2C
 
   virtual task program_IADR(input bit [6:0] addr); 
@@ -86,14 +85,16 @@ class tr_sequence extends uvm_sequence #(tr_msg);
   endtask : check_IBB_status
   
   //Program MSTA and MTX
-  virtual task program_msta_mtx(); 
-      do_APB_write(reg_map["I2C_CTRL"], {16'b0, 8'b0, 6'b1111_00, 2'b00});
+  virtual task program_msta_mtx(input bit [1:0] in); 
+      do_APB_write(reg_map["I2C_CTRL"], {16'b0, 8'b0, 2'b11, in, 4'b00});
   endtask : program_msta_mtx
 
   virtual task do_reset();
       do_APB_idle(); 
       start_item(msg);
       msg.preset = 1; 
+      msg.scl_result = 1;
+      msg.sda_result = 1;
       finish_item(msg);
       start_item(msg);
       msg.preset = 0;

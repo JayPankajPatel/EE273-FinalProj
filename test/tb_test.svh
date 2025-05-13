@@ -1,7 +1,7 @@
 class tb_test extends uvm_test;
   `uvm_component_utils(tb_test);
   tb_env env;
-  tr_sequence seq; 
+  tr_paul_sequence seq; 
 
   function new(string name = "tb_test", uvm_component parent);
     super.new(name, parent);
@@ -10,7 +10,7 @@ class tb_test extends uvm_test;
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     env = tb_env::type_id::create("env", this);
-    seq = tr_sequence::type_id::create("seq");
+    seq = tr_paul_sequence::type_id::create("seq");
   endfunction : build_phase
 
   virtual function void connect_phase(uvm_phase phase); 

@@ -9,18 +9,18 @@ class tr_msg extends uvm_sequence_item;
   rand bit [31:0] pwdata;
   rand bit        preset;
   // APB outputs (read by monitor) 
-  bit [31:0] prdata;
-  bit        pready;
-  bit        pslverr;
+  rand bit [31:0] prdata;
+  rand bit        pready;
+  rand bit        pslverr;
 
   // I2C inputs (driven)
   rand bit        scl_drive;
   rand bit        sda_drive;
 
   // I2C outputs (monitored)
-  bit             scl_result;
-  bit             sda_result;
-  bit             interrupt;
+  rand bit             scl_result;
+  rand bit             sda_result;
+  rand bit             interrupt;
 
 
     function new(string name = "tr_msg");

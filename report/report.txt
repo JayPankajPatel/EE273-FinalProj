@@ -1,3 +1,0 @@
-
-
-Golden DUT is incorrect, reset is active high instead of active low as per APB spec.
